@@ -1,0 +1,194 @@
+.header{
+    position: relative;
+    margin-bottom: 5rem;
+    margin-bottom: 10rem;
+
+    // ======================
+    // navigation 
+    .nav{
+        padding: 5rem 0;
+        
+        &__trigger{
+            position: relative;
+            z-index: 11;
+            cursor: pointer;
+            display: none;
+
+            @media only screen and (max-width:$tab-port){
+                display: block;
+            }
+            svg{
+                width: 4rem;
+                height: 4rem;
+                display: inline-block;
+            }
+        }
+    }
+    .main-nav{
+        display: flex;
+         align-items: center;
+         justify-content: space-between;
+        
+
+         li{
+             &:not(:last-child){
+                 margin-right: 4rem;
+             }
+
+             a{
+                 &:link,
+                 &:visited{
+                     font-size: 1.4rem;
+                     font-family: $font-head;
+                     font-weight: 500;
+                     color: $text-dark;
+                     transition: all .3s;
+                     position: relative;
+                    
+                 }
+
+             }
+         }
+
+         @media only screen and (max-width:$tab-port){
+            //    opacity: 0;
+            //    visibility: hidden;
+               position: fixed;
+               width: 0;
+               height: 100vh;
+               top: 0;
+               right: 0;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               background: $color-primary;
+               z-index: 10;
+               overflow: hidden;
+               transition: all .5s;
+            //    display: none;
+            
+
+               li{
+                   opacity: 0;
+                   transition: .7s;
+                &:not(:last-child){
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                }
+   
+                a{
+                    &:link,
+                    &:visited{
+                        color: #fff;
+                        font-size: 2rem;
+                        display: inline-block;
+                        padding: .5rem 1rem;
+                        background:linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+                        background-size: 235%;
+                        background-position:0;
+                        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                        &:hover{
+                            background-position:100%;
+                            color: $color-primary;
+                        }
+
+                        &::after{
+                            display: none;
+                        }
+                    }
+   
+                }
+            }
+               
+    
+            }
+    }
+
+    .nav__menu{
+
+        &.active{
+            .nav__trigger{
+                position: fixed;
+                width: 4rem;
+                height: 4rem;
+                top: 5.5rem;
+                right: 5%;
+            }
+            .main-nav{
+                width: 250px;
+
+                li{
+                    opacity: 1;
+                }
+            }
+        }
+
+
+
+    }
+
+    &__grid{
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        align-items: center;
+
+        @media only screen and (max-width: $laptop-port){
+            grid-gap: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        }
+        @media only screen and (max-width: $mbl-port){
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+         }
+    }
+    // ==========================================
+    // hero content =============================
+
+    .hero__text-box{
+        padding-right: 10rem;
+        margin-bottom: 5rem;
+        @media only screen and (max-width: $laptop-port){
+            padding-right: 5rem;
+        }
+        @media only screen and (max-width: $tab-port){
+            padding-right: 0;
+        }
+        h1.heading{
+            color: $text-dark;
+            font-weight: 800;
+            font-size: 4.2rem;
+            line-height: 1;
+
+            @media only screen and (max-width: $tab-port){
+                font-size: 3.5rem;
+                font-weight: 600;
+            }
+        }
+        .p__text{
+            font-size: 1.9rem;
+            font-weight: 500;
+        }
+    }
+    &__img-box img{
+        width: 100%;
+        margin-top: -10rem; 
+
+        @media only screen and (max-width: $laptop-port){
+            margin-top: 0;
+        }
+
+    }
+
+    .arrow-block{
+        @media only screen and (max-width: $mbl-land){
+            display: none;
+        }
+        .arrow{
+            img{
+                max-height: 15rem;
+            }
+        }
+    }
+
+}

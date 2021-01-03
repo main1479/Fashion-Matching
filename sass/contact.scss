@@ -1,0 +1,70 @@
+.contact{
+    padding: 8rem 0;
+
+    &__grid{
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: $tab-port){
+            flex-wrap: wrap;
+        }
+
+        &-item{
+            &.content{
+                flex: 0 0 60%;
+                margin-right: 5%;
+
+                @media only screen and (max-width: $tab-port){
+                    flex: 0 0 100%;
+                    margin-bottom: 4rem;
+                    margin-right: 0;
+                }
+
+                h2.heading{
+                    font-size: 4.2rem;
+                }
+                p.p__text{
+                    font-size: 1.9rem;
+                    font-weight: 500;
+                    color: $text-dark;
+                }
+            }
+            &.form{
+                flex: 0 0 35%;
+                justify-content: flex-end;
+                padding-left: 5%;
+                border-left: 1px solid rgba(54, 57, 94, .1);
+
+                @media only screen and (max-width: $tab-port){
+                    flex: 0 0 100%;
+                    padding-left: 0;
+                    border-left: none;
+                }
+
+                h3.heading{
+                    font-size: 2.5rem;
+                    color: $text;
+                }
+
+                .form-box{
+                    .input{
+                        border: none;
+                        border-bottom: 1px solid $text;
+                        width: 100%;
+                        display: inline-block;
+                        padding-bottom: 2rem;
+                        font-family: $font-head;
+                        font-size: 1.7rem;
+
+                        &:focus{
+                            border-bottom: 1px solid red;
+                        }
+
+                        &:not(:placeholder-shown){
+                            border-bottom: 1px solid #1aff53;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

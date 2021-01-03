@@ -1,0 +1,51 @@
+.evaluation{
+    padding-bottom: 5rem;
+    .row.tac{
+        overflow-x: hidden;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 3rem;
+
+        &-item{
+            box-shadow: 0 3px 2.5rem rgba($color: #000000, $alpha: .05);
+            transition: all .3s;
+
+            &:hover{
+                transform: translateY(-5px);
+            }
+
+            &-img{
+                img{
+                    width: 100%;
+                }
+            }
+
+            &-content{
+                padding: 3rem;
+
+                h3.heading{
+                    font-size: 2.1rem;
+                    font-weight: 700;
+                }
+                p.p__text{
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+
+    .p__text.strong{
+        font-size: 1.9rem;
+        color: $text-dark;
+        font-weight: 500;
+
+        strong{
+            font-weight: 600;
+        }
+    }
+}

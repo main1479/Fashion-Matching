@@ -1,0 +1,46 @@
+.heading{
+    font-family: $font-head;
+    color: $text-dark;
+
+    &.pre{
+        font-family: $font-pre-head;
+        font-weight: 300;
+        font-size: 2.2rem;
+        position: relative;
+        // overflow: hidden;
+        display: inline-block;
+        line-height: 1;
+        z-index: 1;
+
+        &::after,
+        &::before{
+            content: '';
+            position: absolute;
+            width: 60rem;
+            height: 1.5px;
+            background: rgba(0,0,0,.2);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            display: inline-block;
+        }
+
+        &::before{
+            right: 110%;
+        }
+
+        &:after{
+            left:110%;
+        }
+    }
+}
+
+h2.heading{
+    font-size: 3.6rem;
+
+}
+
+.p__text{
+    font-family: $font-head;
+    font-size: 1.7rem;
+}

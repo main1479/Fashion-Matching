@@ -1,0 +1,36 @@
+.claims{
+    padding-bottom: 10rem;
+
+    .row{
+        overflow-x: hidden;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-column-gap: 2.5rem;
+        grid-row-gap: 5rem;
+
+        &-item{
+
+            &-img{
+                // min-width: 36rem;
+                // min-height: 36rem;
+                margin-bottom: 1rem;
+                img{
+                    width: 100%;
+                    // object-fit: cover;
+                }
+            }
+
+            &-content{
+                // padding: 3rem;
+
+                h3.heading{
+                    font-size: 2.1rem;
+                    font-weight: 700;
+                }
+                
+            }
+        }
+    }
+}
